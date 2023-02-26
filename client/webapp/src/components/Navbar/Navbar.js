@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
 
   let data = localStorage.getItem('user')
+  let quantity = localStorage.getItem("quantity")
   data = JSON.parse(data)
+  quantity = JSON.parse(quantity)
   const navigate = useNavigate()
 
   const logout=()=>{
@@ -24,7 +26,7 @@ const Navbar = () => {
         <li><Link to='/'>Products</Link></li>
         <li><Link to='/add/product'>Add Product</Link></li>
         <li><Link to='/profile'>Profile</Link></li>
-        <li><Link to='/cart'>Cart</Link></li>
+        <li><Link to='/carts'>Cart {quantity}</Link></li>
         <li> <Link onClick={logout} to='/signup'>🔴Logout  🟢{data}</Link> </li>
        
       </ul>

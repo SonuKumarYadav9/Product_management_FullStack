@@ -1,3 +1,9 @@
+.cover-image{
+  width:1350px;
+  height:60vh
+}
+
+
 .product-list-container {
     margin: 20px auto;
     max-width: 1000px;
@@ -42,7 +48,7 @@
   }
   
   .product-details {
-    padding: 20px;
+    padding: 10px;
   }
   
   .product-details h3 {
@@ -53,7 +59,7 @@
     margin: 0 0 5px;
   }
   
-  .add-product-link {
+  /* .add-product-link {
     padding: 5px 10px;
     background-color: #2196f3;
     color: #fff;
@@ -65,5 +71,65 @@
   
   .add-product-link:hover {
     background-color: #0d6efd;
-  }
-  
+  }        */
+
+  /* Decrease and Increase Quantity Buttons */
+
+/* Add to Cart Button */
+button.quantity-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.quantity-btn:hover {
+  background-color: #388e3c;
+}
+
+button.quantity-btn:first-of-type {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/126/126515.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+button.quantity-btn:last-of-type {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/126/126538.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+button.add-to-cart-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  margin: 24px auto 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.add-to-cart-btn:hover {
+  background-color: #388e3c;
+}
+
+

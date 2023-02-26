@@ -54,9 +54,9 @@ const AddProduct = () => {
 
       const data = await response.json();
       console.log(data);
-      if (data.status === true) {
+      // if (data.status === true) {
         navigate("/");
-      }
+    // }
     } catch (error) {
       console.error(error);
     }

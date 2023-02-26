@@ -10,7 +10,7 @@ const mid = async (req, res, next) => {
         let token = authorization.split(" ")[1];
         const { userID } = jwt.verify(token, "sonukumaryadavkey");
         req.user = await userModel.findById(userID).select("--password");
-       console.log(req.user)
+      //  console.log(req.user)
         next();
       } else {
         return res.status(401).send({ msg: "Unauthorised user" })

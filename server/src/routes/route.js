@@ -22,7 +22,7 @@ const {saveOrder,findOrders} =orderController
  router.get("/products", getAllProduct)
  router.get("/products/filterby",getAllByFilter)
  //carts
- router.post("/add/cart",mid,addToCart)
+ router.post("/add/cart",addToCart)
  router.get("/carts",mid,getCartItems)
 //orders
 router.put("/saveorder/:id",mid,saveOrder)
