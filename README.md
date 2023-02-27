@@ -18,3 +18,6 @@ npm start
 Runs the app in the development mode.
 Open http://localhost:5000 to view it in your local.
 
+ # The Website look like This
+
+![register](https://user-images.githubusercontent.com/106573507/221603507-b3a5e3bb-bfb1-427c-9959-38f8d5ed8508.JPG)
