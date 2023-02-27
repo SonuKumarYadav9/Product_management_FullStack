@@ -1,59 +1,81 @@
-.product-list {
+
+   .product-cart {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  
-  .product-cart {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ccc;
   }
   
   .image {
     flex: 1;
-    max-width: 150px;
-    margin-right: 1rem;
+    margin-right: 20px;
   }
   
   .image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   
   .cart-detail {
-    flex: 3;
+    flex: 2;
   }
   
-  h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  .cart-detail h1 {
+    font-size: 20px;
+    margin: 0;
   }
   
-  p {
-    margin: 0.5rem 0;
+  .cart-detail p {
+    margin: 0;
   }
   
-  h3 {
-    margin-top: 1rem;
+  .add-cart-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  .add-cart-link:hover {
+    background-color: #3e8e41;
+  }
+  
+  .remove-link {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .remove-link:hover {
+    background-color: #d81b00;
+  }
+  
+  .product-list {
+    margin-top: 20px;
+  }
+  
+  .product-list h2 {
+    margin-top: 0;
   }
   
   .total-price {
-    margin-top: 2rem;
-    text-align: right;
-    font-size: 1.5rem;
-  }
-
-  .add-cart-link {
-    padding: 5px 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
   }
   

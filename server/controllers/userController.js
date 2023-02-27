@@ -78,4 +78,22 @@ const userLogin = async (req, res) => {
   }
 };
 
-module.exports = { registerUSer, userLogin };
+
+const users = async (req,res)=>{
+  try {
+    let user = req.user
+    let findUser = await userModel.findOne({_id:user._id}).select({password:0})
+    if(findUser){
+      return res.status(200).json({status:true,data:findUser})
+    }else{
+      return res.status(404).json({status:false,msg:"User No found"})
+    }
+    
+
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ status: false, msg: error.message });
+  }
+}
+
+module.exports = { registerUSer, userLogin,users };

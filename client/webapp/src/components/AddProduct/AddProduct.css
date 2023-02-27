@@ -2,10 +2,10 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1677306801~exp=1677307401~hmac=0fbb4a9da413d27c22804437911a32eb0c585b913bc4c350cce66a3a29b7d10c"); */
-  }
+     background-image: url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1677306801~exp=1677307401~hmac=0fbb4a9da413d27c22804437911a32eb0c585b913bc4c350cce66a3a29b7d10c");
+}
   
-  label {
+label {
     display: block;
     margin-bottom: 0.5rem;
     color:rgb(14, 14, 15);
@@ -39,18 +39,4 @@ form {
   div:last-of-type {
     margin-bottom: 1rem;
   }
-  /* https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1677306801~exp=1677307401~hmac=0fbb4a9da413d27c22804437911a32eb0c585b913bc4c350cce66a3a29b7d10c */
-  /* body{
-  background-image: url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1677306801~exp=1677307401~hmac=0fbb4a9da413d27c22804437911a32eb0c585b913bc4c350cce66a3a29b7d10c");
-  height: 100vh; 
-  width: 200px;
-} */
 
-.full_body{
-    /* background-image: url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=900&t=st=1677306801~exp=1677307401~hmac=0fbb4a9da413d27c22804437911a32eb0c585b913bc4c350cce66a3a29b7d10c"); 
-    height: 90vh; 
-    width: 1345px;
-    margin-top:0%;
-margin-right: 200px; */
-background-color: #5d5f61;
-}

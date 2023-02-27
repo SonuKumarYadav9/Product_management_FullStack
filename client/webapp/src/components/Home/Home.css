@@ -1,135 +1,153 @@
-.cover-image{
-  width:1350px;
-  height:60vh
-}
-
-
-.product-list-container {
-    margin: 20px auto;
-    max-width: 1000px;
-  }
-  
-  .product-list-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .product-list-header h2 {
-    margin: 0;
-  }
-  
-  .add-product-link {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .product-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .product-details {
-    padding: 10px;
-  }
-  
-  .product-details h3 {
-    margin: 0 0 10px;
-  }
-  
-  .product-details p {
-    margin: 0 0 5px;
-  }
-  
-  /* .add-product-link {
-    padding: 5px 10px;
-    background-color: #2196f3;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .add-product-link:hover {
-    background-color: #0d6efd;
-  }        */
-
-  /* Decrease and Increase Quantity Buttons */
-
-/* Add to Cart Button */
-button.quantity-btn {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
+/* Product Container */
+/* .product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+} */
+
+/* Product Cover Image */
+.product-cover-image {
+  width: 100%;
+  height: 40vh;
+}
+
+/* Product List Container */
+.product-list-container {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Product List Header */
+.product-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+/* Product List Title */
+.product-list-title {
   font-size: 24px;
-  margin: 0 8px;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+  margin: 0;
 }
 
-button.quantity-btn:hover {
-  background-color: #388e3c;
-}
-
-button.quantity-btn:first-of-type {
-  background-image: url("https://cdn-icons-png.flaticon.com/512/126/126515.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-}
-
-button.quantity-btn:last-of-type {
-  background-image: url("https://cdn-icons-png.flaticon.com/512/126/126538.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-}
-
-button.add-to-cart-btn {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
-  margin: 24px auto 0;
-  cursor: pointer;
+/* Product Searchbar */
+.product-searchbar {
+  padding: 8px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 250px;
 }
 
-button.add-to-cart-btn:hover {
-  background-color: #388e3c;
+/* Product Filter Link */
+.product-filter-link {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Product List */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 450px;
+}
+
+/* Product Image */
+.product-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Product Image img */
+.product-image img {
+  max-height: 200px;
+  max-width: 100%;
+}
+
+/* Product Details */
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+/* Product Price */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+/* Product Category */
+.product-category {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Product Quantity */
+.product-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Quantity Button */
+.quantity-button {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Add Product Button */
+.add-product-button {
+  background-color: #333;
+  color: #fff
 }
 
 

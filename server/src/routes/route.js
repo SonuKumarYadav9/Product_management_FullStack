@@ -1,43 +1,32 @@
- const express = require("express")
- const router  = express.Router()
- const mid = require("../../middleware/auth")
+const express = require("express");
+const router = express.Router();
+const mid = require("../../middleware/auth");
 
-const userController = require("../../controllers/userController")
-const cartController  = require("../../controllers/cartController")
-const productController  = require("../../controllers/productController")
-const orderController  = require("../../controllers/orderController")
+const userController = require("../../controllers/userController");
+const cartController = require("../../controllers/cartController");
+const productController = require("../../controllers/productController");
+const orderController = require("../../controllers/orderController");
 
-
-// destructuring 
-const { registerUSer,userLogin } = userController
-const { createProduct,getAllProduct,getAllByFilter }= productController
-const {addToCart ,getCartItems }= cartController
-const {saveOrder,findOrders} =orderController
+// destructuring
+const { registerUSer, userLogin, users } = userController;
+const { createProduct, getAllProduct, getAllByFilter } = productController;
+const { addToCart, getCartItems, deleteCart } = cartController;
+const { saveOrder, findOrders } = orderController;
 
 //USER
- router.post("/register",registerUSer)
- router.post("/login",userLogin)
- //products
- router.post("/add/product", mid, createProduct)
- router.get("/products", getAllProduct)
- router.get("/products/filterby",getAllByFilter)
- //carts
- router.post("/add/cart",addToCart)
- router.get("/carts",mid,getCartItems)
+router.post("/register", registerUSer);
+router.post("/login", userLogin);
+router.get("/user", mid, users);
+//products
+router.post("/add/product", mid, createProduct);
+router.get("/products", getAllProduct);
+router.get("/products/filterby", getAllByFilter);
+//carts
+router.post("/add/cart", addToCart);
+router.get("/carts", mid, getCartItems);
+router.delete("/carts/:id", mid, deleteCart);
 //orders
-router.put("/saveorder/:id",mid,saveOrder)
-router.get("/orders",mid,findOrders)
+router.post("/buy-product", mid, saveOrder);
+router.get("/purchased", mid, findOrders);
 
-
-module.exports = router
-
-// const storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//       cb(null, "public/upload");
-//     },
-//     filename: (req, file, cb) => {
-//       cb(null, `${Date.now()}-${file.originalname}`);
-//     },
-//   });
-
-//   const upload = multer({ storage });
+module.exports = router;

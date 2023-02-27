@@ -1,49 +1,73 @@
-.navbar-container {
+
+   .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
+    font-size: 20px;
   }
   
   .logo {
-    width: 100px;
-    height: 80px;
-    border-radius: 25px;
-    margin: 0 10px;
+    height: 50px;
+    margin-right: 10px;
   }
   
   .titleStyle {
-    font-size: 30px;
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #eb0c0c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: red;
   }
-  
   
   .nav-ul {
     display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
   }
+  .nav-ul li:hover {
+    color: #961b06;
+  }
   
   .nav-ul li {
-    margin: 0 10px;
+    margin-right: 20px;
   }
   
-  .nav-ul a {
+  .nav-ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 18px;
   }
   
-  .nav-ul a:hover {
-    color: #333;
-    background-color: #fff;
-    padding: 5px 10px;
+  .nav-ul li a:hover {
+    color: #961b06;
+  }
+  
+  .nav-ul li a:active {
+    color: #fff;
+  }
+  
+  .nav-ul li a:visited {
+    color: #fff;
+  }
+  
+  .nav-ul li:last-child a {
+    background-color: #f10b0b;
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 5px;
+  }
+  
+  .nav-ul li:last-child a:hover {
+    background-color: #fff;
+    color: #ec0a0a;
   }
   

@@ -7,6 +7,9 @@ import Navbar from "./components/Navbar/Navbar";
 import AddProduct from "./components/AddProduct/AddProduct";
 import PrivateComponent from "./components/Private/PrivateComponent";
 import Carts from "./components/Carts/Carts";
+import User from "./components/User/User";
+import Purchase from "./components/Purchase/Purcahse";
+import FilterProduct from "./components/FetchProduct/FilterProduct";
 
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/add/product" element={<AddProduct/>}></Route>
           <Route path="/carts" element={<Carts/>}></Route>
+          <Route path="/profile" element={<User/>}></Route>
+          <Route path="/purchase" element={<Purchase/>}></Route>
+          <Route path="/filter" element={<FilterProduct/>}></Route>
           </Route> 
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>   

@@ -1,6 +1,6 @@
 import "./Register.css";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link } from "react-router-dom";
 
 const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -48,9 +48,10 @@ const RegisterForm = () => {
         setErrorMessage(data.msg);
       } else {
        //seeting the name and token to localStorage
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("user", data.data.name);
-        localStorage.setItem("userID",data.data._id)
+        localStorage.setItem("token", JSON.stringify(data.token));
+        localStorage.setItem("user", JSON.stringify(data.data.name));
+        localStorage.setItem("userID",JSON.stringify(data.data._id))
+        localStorage.setItem("image",JSON.stringify(data.data.image))
           nav('/')
 
       }
@@ -84,6 +85,7 @@ const RegisterForm = () => {
         <input type="file" accept="image/*" onChange={handleImageChange} />
       </div>
       <button type="submit">Register</button>
+      <Link to={'/login'} >Go to Login</Link>
     </form>
   );
 };

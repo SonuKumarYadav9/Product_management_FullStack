@@ -9,7 +9,7 @@ const db = require("../config/db")
 const route = require("./routes/route")
 const app = express()
 
-//GM
+//Global MIDDLEWARES
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(multer().any())

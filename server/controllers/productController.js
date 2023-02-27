@@ -72,6 +72,7 @@ const getAllByFilter = async (req, res) => {
       image:1
     };
     const products = await productModel.find(filter, projection);
+    console.log(products)
 
     res.status(200).json(products);
   } catch (error) {
