@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
     <div className="navbar-container">
-    <Link to='/'>  <img className='logo' src='https://cdn-icons-png.flaticon.com/512/669/669736.png?w=740&t=st=1677307885~exp=1677308485~hmac=9b339e33b6defb246296cf99b77e13d6c7da98d33da4db8f2a6e7588455ea14d' alt='logo' /> </Link>
+    <Link to='/'>  <img className='logo' src='https://e7.pngegg.com/pngimages/425/225/png-clipart-shopee-indonesia-online-shopping-e-commerce-others-miscellaneous-text-thumbnail.png' alt='logo' /> </Link>
       <p className='titleStyle'>SlipKart</p>
  {data ?   
     <ul className='nav-ul'>
