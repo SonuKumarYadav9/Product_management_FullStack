@@ -26,6 +26,9 @@ npm start
 Runs the app in the development mode.
 Open http://localhost:5000 to view it in your local.
 
+# VideoLink 
+https://drive.google.com/file/d/1L1jNS7mQYVVdbZVUf4xJ2ygUWoZxWHnC/view?usp=sharing
+
  # The Website look like This
  # Register
 
@@ -52,12 +55,7 @@ Open http://localhost:5000 to view it in your local.
 
 # postman Collection
 {
-	"info": {
-		"_postman_id": "9819ec0f-b219-4fe6-85ad-6dfa48f38984",
-		"name": "Product_MANAGEMENT_TASK",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21096553"
-	},
+	
 	"item": [
 		{
 			"name": "register",
