@@ -27,7 +27,7 @@ const Navbar = () => {
         <li><Link to='/add/product'>Add Product</Link></li>
         <li><Link to='/profile'>Profile</Link></li>
         <li><Link to='/carts'>Cart {quantity}</Link></li>
-        <li> <Link onClick={logout} to='/signup'>🔴Logout  🟢{data}</Link> </li>
+        <li> <Link onClick={logout} to='/register'>🔴Logout  🟢{data}</Link> </li>
        
       </ul>
       : 
