@@ -50,5 +50,293 @@ Open http://localhost:5000 to view it in your local.
 # carts
 ![carts](https://user-images.githubusercontent.com/106573507/221605347-0e5188a1-179d-4073-8ac1-2d397c945b78.JPG)
 
-# carts 
-![carts](https://user-images.githubusercontent.com/106573507/221605347-0e5188a1-179d-4073-8ac1-2d397c945b78.JPG)
+# postman Collection
+{
+	"info": {
+		"_postman_id": "9819ec0f-b219-4fe6-85ad-6dfa48f38984",
+		"name": "Product_MANAGEMENT_TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21096553"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sonu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "s@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "eMFe04fwQ/Passprt pic.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\":\"s@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2M2Y3NTNjN2YyOWRhN2NmN2IyMTViMmEiLCJpYXQiOjE2Nzc0NzE2MjAsImV4cCI6MTY3NzY0NDQyMH0.SGFA6fs7WdY9mfO67nP6BnKp7MtLzdI9F099DR2_sBs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "I phone 15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "200000",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "mobile",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "8dAUJHi1v/i phones.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/add/product",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products By Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products/filterby?category=mobile&max_price=1000&min_price=500",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"filterby"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "mobile"
+						},
+						{
+							"key": "max_price",
+							"value": "1000"
+						},
+						{
+							"key": "min_price",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Products with price,category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Addto Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"63fc2fa2ae0ea0acf597d9f5\",\r\n    \"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/add/cart",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Carts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2M2Y3NTNjN2YyOWRhN2NmN2IyMTViMmEiLCJpYXQiOjE2NzcyMjI3NjYsImV4cCI6MTY3NzM5NTU2Nn0.U1EIFNYPkdwc667iDtl9HAilE0R4XLrFIDIIMMr8yJA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/carts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savePrchase Order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/remove/63fc16e202be988efac57d71",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"remove",
+						"63fc16e202be988efac57d71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all PUrchased",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "findUSER",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
