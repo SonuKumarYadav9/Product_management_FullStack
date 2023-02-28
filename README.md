@@ -1,4 +1,12 @@
 # Product_management_FullStack
+# Features
+Customers can see the list of products with their price and category
+App should have a facility that allows user to filter products based on their category and price range
+Customers should be able to add products to the cart
+When clicked on cart button list of products added in the cart should be visible with their quantity and price
+User should be able to increase and decrease the quantity using '+' and '-' buttons in cart
+Added products can be purchased using mock payment(just update a key in DB)
+Customers can access their purchase history with given time-frame.
 
 In the project directory, you can run:
 
